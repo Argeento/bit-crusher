@@ -1,7 +1,11 @@
 export function smartQuotes (str: string) {
-  return str.split('"').length >= str.split("'").length
-    ? `'${str.replace(/'/g, '\\\'')}'`
-    : `"${str.replace(/"/g, '\\\"')}"`
+  if (str.includes('\n')) {
+    return '`' + str.replace(/`/g, '\\\`') + '`'
+  } else {
+    return str.split('"').length >= str.split("'").length
+      ? `'${str.replace(/'/g, '\\\'')}'`
+      : `"${str.replace(/"/g, '\\\"')}"`
+  }
 }
 
 export function getShortestString (strings: Array<string>) {
