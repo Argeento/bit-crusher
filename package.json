@@ -8,7 +8,7 @@
     "js1k",
     "jscrush"
   ],
-  "main": "dist/bit-crusher.esm.js",
+  "main": "dist/bit-crusher.cjs.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c"
